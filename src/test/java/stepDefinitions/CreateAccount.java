@@ -16,4 +16,14 @@ public class CreateAccount {
 	public CreateAccount(WebDriverHooks hooks) {
 		this.webDriver = hooks.getWebDriver();
 	}
+	
+	@When("the user enters an email address and clicks create account")
+	public void theUserCreates(String email) {
+		webDriver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+	}
+	
+	@Then("the user will have an account created")
+	public void theUserAccountIsCreated() {
+		assertEquals();
+	}
 }
